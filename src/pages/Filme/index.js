@@ -12,6 +12,22 @@ function Filme() {
   const [filme, SetFilme] = useState({});
   const [loading, SetLoading] = useState(true);
 
+  function salvarFilme(){
+    const myList = localStorage.getItem("@devflix");
+
+    let filmesSalvos = JSON.parse(myList) || []
+
+    const  hasFilmes = filmesSalvos.some((filmeSalvo) => filmeSalvo.id === filme.id )
+    if(hasFilmes){
+      alert('Este filme ja esta salvo na sua lista')
+      return
+    }
+
+      filmesSalvos.push(filme)
+      localStorage.setItem("@devflix", JSON.stringify(filmesSalvos))
+      alert('filme salvo com sucesso')
+  }
+
   useEffect(() => {
 
     async function loadFilme() {
@@ -63,10 +79,10 @@ function Filme() {
       <strong>Avaliação: {filme.vote_average} /10</strong>
 
       <div className="area-buttons">
-        <button>Salvar</button>
+        <button onClick={salvarFilme}>Salvar</button>
 
         <button>
-          <a target="_blank" rel="external" href={`https://youtube.com/results?search_query=${filme.title} trailer`}>Trailer</a>
+          <a target="blank" rel="external" href={`https://youtube.com/results?search_query=${filme.title} trailer`}>Trailer</a>
         </button>
 
       </div>
