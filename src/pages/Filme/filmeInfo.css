@@ -4,6 +4,7 @@
     flex-direction: column;
     max-width: 800px;
     padding: 0 8px;
+    margin: auto;
 }
 
 .filme-info h1{
@@ -20,4 +21,35 @@
 
 .filme-info h3{
     margin-top: 14px;
+}
+
+.filme-info span{
+    margin: 8px 0;
+}
+
+.area-buttons button{
+    margin-right: 12px;
+    margin-top: 14px;
+    margin-left: 0;
+    font-size: 20px;
+    border: 0;
+    outline: none;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.area-buttons a{
+    text-decoration: none;
+    color: #000;
+}
+
+.area-buttons button:hover{
+    background-color: brown;
+    color: white;
+    transition: all 0.5s;
+}
+
+.area-buttons a:hover{
+    color: #fff;
 }
