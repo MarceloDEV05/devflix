@@ -1,13 +1,12 @@
 import RoutesApp from './routes';
 import './index.css';
 
-//api key = 348a469331f24440304cc00903d237a2
-//base: http://api.themoviedb.org/3/
-
+import {ToastContainer, toast} from 'react-toastify'
 
 function App() {
   return (
     <div className="App">
+      <ToastContainer autoClose={3000} /> 
       <RoutesApp/> 
     </div>
   );

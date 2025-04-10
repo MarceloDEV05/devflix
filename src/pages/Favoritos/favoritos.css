@@ -1,0 +1,40 @@
+.filmesSalvos{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.filmesSalvos h1{
+    margin-bottom: 14px;
+}
+
+.filmesSalvos span{
+    font-size: 18px;
+
+}
+
+.filmesSalvos ul {
+    width: 720px;
+}
+
+.filmesSalvos ul li{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.filmesSalvos div{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.filmesSalvos div a{
+    text-decoration: none;
+    color: #116feb;
+    margin-right: 14px;
+}
